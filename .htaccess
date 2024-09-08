@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^sw\.js$ - [L]
+RewriteCond %{REQUEST_URI} !\.(?:css|js|json|mino|jpe?g|gif|png|woff2)$ [NC]
+RewriteRule ^([^/]+)/? index.php?url=$1 [L,QSA]
